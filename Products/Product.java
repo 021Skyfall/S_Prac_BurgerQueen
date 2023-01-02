@@ -24,10 +24,10 @@ public abstract class Product {
     public void setPrice(int price) {
         this.price = price;
     }
-
     public void setKcal(int kcal) {
         this.kcal = kcal;
     }
+
     public int getId() {
         return id;
     }

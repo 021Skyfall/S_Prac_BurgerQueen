@@ -17,11 +17,6 @@ public class Burgers_Set extends Product {
         this.side = side;
     }
 
-    public Burgers_Set(int id, String name, int price, int kcal) {
-        super(id, name, price, kcal);
-
-    }
-
     public Burgers getBurgers() {
         return burgers;
     }

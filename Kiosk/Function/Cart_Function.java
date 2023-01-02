@@ -7,7 +7,6 @@ import Products.List.Product_Repository;
 import Products.Product;
 import Products.Sides.Side;
 
-import java.awt.*;
 import java.util.Scanner;
 
 public class Cart_Function {
@@ -60,7 +59,7 @@ public class Cart_Function {
             System.out.printf("빨대가 필요하십니까? (1)_예 (2)_아니오\n");
             input = scanner.nextLine();
             if (input == "2") {
-                ((Beverage) product).setStraw(false);
+                ((Beverage) product).setHasStraw(false);
             }
         }
     }

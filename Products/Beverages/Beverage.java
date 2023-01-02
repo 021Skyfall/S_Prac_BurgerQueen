@@ -4,18 +4,18 @@ import Products.Product;
 
 public class Beverage extends Product {
 
-    private boolean straw;
+    private boolean hasStraw;
 
     public Beverage(int id, String name, int price, int kcal, boolean straw) {
         super(id, name, price, kcal);
-        this.straw = straw;
+        this.hasStraw = straw;
     }
 
     public boolean Straw() {
-        return straw;
+        return hasStraw;
     }
 
-    public void setStraw(boolean straw) {
-        this.straw = straw;
+    public void setHasStraw(boolean hasStraw) {
+        this.hasStraw = hasStraw;
     }
 }

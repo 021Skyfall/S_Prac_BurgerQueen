@@ -4,8 +4,8 @@ import Products.Product;
 
 public class Burgers extends Product {
 
-    boolean isBurgerSet;
-    int burgerSetPrice;
+    private boolean isBurgerSet;
+    private int burgerSetPrice;
 
     public Burgers(int id, String name, int price, int kcal, boolean isBurgerSet, int burgerSetPrice) {
         super(id, name, price, kcal);
