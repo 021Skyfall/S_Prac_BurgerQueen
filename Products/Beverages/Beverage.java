@@ -6,12 +6,12 @@ public class Beverage extends Product {
 
     private boolean hasStraw;
 
-    public Beverage(int id, String name, int price, int kcal, boolean straw) {
+    public Beverage(int id, String name, int price, int kcal, boolean hasStraw) {
         super(id, name, price, kcal);
-        this.hasStraw = straw;
+        this.hasStraw = hasStraw;
     }
 
-    public boolean Straw() {
+    public boolean hasStraw() {
         return hasStraw;
     }
 

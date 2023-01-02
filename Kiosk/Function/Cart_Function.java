@@ -95,7 +95,7 @@ public class Cart_Function {
         System.out.println("-".repeat(50));
         System.out.printf("합계 : %d원\n",totalPrice());
 
-        System.out.println("이전으로 돌아가려면 엔터를 누르세요. ");
+        System.out.println("이전으로 돌아가려면 엔터를 누르세요.");
         scanner.nextLine();
     }
 
@@ -108,7 +108,7 @@ public class Cart_Function {
                         burgersSet.getSide().getName(),
                         burgersSet.getSide().getKetchup(),
                         burgersSet.getBeverage().getName(),
-                        burgersSet.getBeverage().Straw() ? "있음" : "없음");
+                        burgersSet.getBeverage().hasStraw() ? "있음" : "없음");
             } else if (products instanceof Burgers) {
                 System.out.printf(" %-8s %6d원 (단품)\n"
                 , products.getName(),
@@ -122,7 +122,7 @@ public class Cart_Function {
                 System.out.printf(" %-8s %6d원 (빨대 %s)\n"
                 ,products.getName()
                 ,products.getPrice()
-                ,((Beverage) products).Straw() ? "있음" : "없음");
+                ,((Beverage) products).hasStraw() ? "있음" : "없음");
             }
         }
     }
