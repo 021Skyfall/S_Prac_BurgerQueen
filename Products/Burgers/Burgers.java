@@ -22,7 +22,4 @@ public class Burgers extends Product {
     public int getBurgerSetPrice() {
         return burgerSetPrice;
     }
-    public void setBurgerSetPrice(int burgerSetPrice) {
-        this.burgerSetPrice = burgerSetPrice;
-    }
 }
