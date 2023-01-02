@@ -4,9 +4,9 @@ import Products.Product;
 
 public class Beverage extends Product {
 
-    boolean straw;
+    private boolean straw;
 
-    public Beverage(int id, String name, int price, int kcal) {
+    public Beverage(int id, String name, int price, int kcal, boolean straw) {
         super(id, name, price, kcal);
         this.straw = straw;
     }

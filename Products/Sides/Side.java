@@ -4,10 +4,11 @@ import Products.Product;
 
 public class Side extends Product {
 
-    int ketchup;
+    private int ketchup;
 
     public Side(int id, String name, int price, int kcal) {
         super(id, name, price, kcal);
+        this.ketchup = ketchup;
     }
 
     public int getKetchup() {

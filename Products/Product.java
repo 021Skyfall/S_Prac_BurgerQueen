@@ -13,21 +13,21 @@ public abstract class Product {
         this.kcal = kcal;
     }
 
-//    public void setId(int id) {
-//        this.id = id;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public void setPrice(int price) {
-//        this.price = price;
-//    }
-//
-//    public void setKcal(int kcal) {
-//        this.kcal = kcal;
-//    }
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public void setKcal(int kcal) {
+        this.kcal = kcal;
+    }
     public int getId() {
         return id;
     }
@@ -41,4 +41,9 @@ public abstract class Product {
         return kcal;
     }
 
+    public Product(String name, int price, int kcal) {
+        this.name = name;
+        this.price = price;
+        this.kcal = kcal;
+    }
 }
