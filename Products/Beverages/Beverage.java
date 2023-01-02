@@ -10,6 +10,10 @@ public class Beverage extends Product {
         super(id, name, price, kcal);
         this.hasStraw = hasStraw;
     }
+    public Beverage (Beverage beverage) {
+        super(beverage.getName(), beverage.getPrice(), beverage.getKcal());
+        this.hasStraw = beverage.hasStraw();
+    }
 
     public boolean hasStraw() {
         return hasStraw;

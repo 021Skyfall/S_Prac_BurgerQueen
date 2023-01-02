@@ -48,17 +48,17 @@ public class Cart_Function {
             System.out.printf("단품으로 주문하시겠습니까? (1)_단품(%d) (2)_세트(%d원)\n"
             ,product.getPrice(),((Burgers) product).getBurgerSetPrice());
             input = scanner.nextLine();
-            if (input == "2"){
+            if (input.equals("2")){
                 ((Burgers) product).setBurgerSet(true);
             }
         } else if (product instanceof Side) {
-            System.out.printf("케첩은 몇 개 필요하십니까?\n");
+            System.out.println("케첩은 몇 개 필요하십니까?");
             input = scanner.nextLine();
             ((Side) product).setKetchup(Integer.parseInt(input));
         } else if (product instanceof Beverage) {
-            System.out.printf("빨대가 필요하십니까? (1)_예 (2)_아니오\n");
+            System.out.println("빨대가 필요하십니까? (1)_예 (2)_아니오");
             input = scanner.nextLine();
-            if (input == "2") {
+            if (input.equals("2")) {
                 ((Beverage) product).setHasStraw(false);
             }
         }
