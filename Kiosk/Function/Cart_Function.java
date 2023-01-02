@@ -120,7 +120,7 @@ public class Cart_Function {
                 ,products.getPrice()
                 ,((Side)products).getKetchup());
             } else if (products instanceof Beverage) {
-                System.out.printf(" %-8s %6d원\n"
+                System.out.printf(" %-8s %6d원 (빨대 %s)\n"
                 ,products.getName()
                 ,products.getPrice()
                 ,((Beverage) products).Straw() ? "있음" : "없음");
