@@ -31,11 +31,16 @@ public class Cart_Function {
             }
         }
 
+        Product newProduct;
+        if (product instanceof Burgers) newProduct = new Burgers((Burgers) product);
+        else if (product instanceof Side) newProduct = new Side((Side) product);
+        else if (product instanceof Beverage) newProduct = new Beverage((Beverage) product);
+        else newProduct = new Burgers_Set ((Burgers_Set) product);
 
 
         Product[] newItems = new Product[items.length + 1];
         System.arraycopy(items, 0, newItems, 0, items.length);
-        newItems[newItems.length - 1] = product;
+        newItems[newItems.length - 1] = newProduct;
         items = newItems;
 
         System.out.printf("[\uD83D\uDCE3] %s를(을) 장바구니에 담았습니다.\n", product.getName());
