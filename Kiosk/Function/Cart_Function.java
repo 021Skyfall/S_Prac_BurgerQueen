@@ -42,7 +42,7 @@ public class Cart_Function {
 
     }
 
-    public void chooseOption(Product product){
+    private void chooseOption(Product product){
         String input;
         if (product instanceof Burgers) {
             System.out.printf("단품으로 주문하시겠습니까? (1)_단품(%d) (2)_세트(%d원)\n"
@@ -99,7 +99,7 @@ public class Cart_Function {
         scanner.nextLine();
     }
 
-    public void printCartItems() {
+    private void printCartItems() {
         for(Product products : items) {
             if (products instanceof Burgers_Set) {
                 Burgers_Set burgersSet =  (Burgers_Set) products;
