@@ -15,6 +15,8 @@ public class Kiosk {
         Product[] products = productRepository.getProducts();
         Menu_Function menuFunction = new Menu_Function(products);
         Cart_Function cartFunction = new Cart_Function(productRepository,menuFunction);
+        Order_Function orderFunction = new Order_Function(cartFunction);
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("🍔 BurgerQueen Order Service");
@@ -22,11 +24,13 @@ public class Kiosk {
         while(true) {
             menuFunction.printMenu();
             String option = scanner.nextLine();
+
             if (option.equals("+")) {
-                //주문 내역 출력
+                orderFunction.makeOrder();
                 break;
             } else {
                 int menuNumber = Integer.parseInt(option);
+
                 if (menuNumber == 0) cartFunction.printCart();
                 else if (1 <= menuNumber && menuNumber <= products.length) {
                     cartFunction.addToCart(menuNumber);
