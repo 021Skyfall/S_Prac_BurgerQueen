@@ -1,11 +1,6 @@
 package Kiosk.Function;
 
-import Discounts.Condition.Coz;
-import Discounts.Condition.Kid;
-import Discounts.DS_Condition;
 import Discounts.Discount;
-import Discounts.Policy.FixedAmount;
-import Discounts.Policy.FixedRate;
 
 public class Order_Function {
     Cart_Function cartFunction;
