@@ -33,7 +33,7 @@ public class Menu_Function {
         System.out.print("[📣] 메뉴를 선택해주세요 : ");
     }
 
-    protected void PrintBeverage(boolean printPrice) {
+    void PrintBeverage(boolean printPrice) {
         System.out.println("\uD83E\uDD64 음료");
         for (Product product : products) {
             if(product instanceof Beverage) {
@@ -42,7 +42,7 @@ public class Menu_Function {
         }
     }
 
-    protected void PrintSide(boolean printPrice) {
+    void PrintSide(boolean printPrice) {
         System.out.println("🍟 사이드");
         for(Product product : products) {
             if(product instanceof Side) {
@@ -51,7 +51,7 @@ public class Menu_Function {
         }
     }
 
-    protected void PrintBurger(boolean printPrice) {
+    void PrintBurger(boolean printPrice) {
         System.out.println("🍔 햄버거");
         for(Product product : products) {
             if(product instanceof Burgers) {
