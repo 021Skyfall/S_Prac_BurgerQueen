@@ -28,7 +28,7 @@ public class Kiosk {
             } else {
                 int menuNumber = Integer.parseInt(option);
                 if (menuNumber == 0) cartFunction.printCart();
-                else if (1 <= menuNumber && menuNumber <= productRepository.getProducts().length) {
+                else if (1 <= menuNumber && menuNumber <= products.length) {
                     cartFunction.addToCart(menuNumber);
                 }
             }
