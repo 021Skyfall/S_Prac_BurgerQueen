@@ -37,7 +37,7 @@ public class Menu_Function {
         System.out.println("\uD83E\uDD64 음료");
         for (Product product : products) {
             if(product instanceof Beverage) {
-                ex_printMenu(product);
+                ex_printMenu(product, printPrice);
             }
         }
     }
@@ -46,7 +46,7 @@ public class Menu_Function {
         System.out.println("🍟 사이드");
         for(Product product : products) {
             if(product instanceof Side) {
-                ex_printMenu(product);
+                ex_printMenu(product, printPrice);
             }
         }
     }
@@ -55,18 +55,19 @@ public class Menu_Function {
         System.out.println("🍔 햄버거");
         for(Product product : products) {
             if(product instanceof Burgers) {
-                ex_printMenu(product);
+                ex_printMenu(product, printPrice);
             }
         }
     }
 
-    private void ex_printMenu(Product product) {
+    private void ex_printMenu(Product product, boolean printPrice) {
         if (printPrice) {
             System.out.printf(
                     "   (%d) %s %5dKcal %5d원\n",
                     product.getId(), product.getName(), product.getKcal(), product.getPrice());
         } else {
-            System.out.printf("  (%d) %s %5dKcal\n",product.getId(),product.getName(),product.getKcal());
+            System.out.printf("  (%d) %s %5dKcal\n",
+                    product.getId(),product.getName(),product.getKcal());
         }
     }
 }

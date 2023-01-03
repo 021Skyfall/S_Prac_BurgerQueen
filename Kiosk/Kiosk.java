@@ -16,7 +16,9 @@ public class Kiosk {
         Menu_Function menuFunction = new Menu_Function(products);
         Cart_Function cartFunction = new Cart_Function(productRepository,menuFunction);
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("🍔 BurgerQueen Order Service");
+
         while(true) {
             menuFunction.printMenu();
             String option = scanner.nextLine();
