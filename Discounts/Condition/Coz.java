@@ -1,7 +1,6 @@
 package Discounts.Condition;
 
 import Discounts.DS_Condition;
-import Discounts.Policy.FixedRate;
 import Discounts.Policy.Policy;
 
 import java.util.Scanner;
