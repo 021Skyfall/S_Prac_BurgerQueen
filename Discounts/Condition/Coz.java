@@ -1,12 +1,18 @@
 package Discounts.Condition;
 
+import Discounts.DS_Condition;
 import Discounts.Policy.FixedRate;
+import Discounts.Policy.Policy;
 
 import java.util.Scanner;
 
-public class Coz {
+public class Coz implements DS_Condition {
     private boolean isSatisfied;
-    private FixedRate fixedRate = new FixedRate(10);
+    private Policy policy;
+
+    public Coz(Policy policy) {
+        this.policy = policy;
+    }
 
     public boolean isSatisfied() {
         return isSatisfied;
@@ -27,6 +33,6 @@ public class Coz {
     }
 
     public int applyDiscount(int price) {
-        return fixedRate.calDiscountPrice(price);
+        return policy.calDiscountPrice(price);
     }
 }

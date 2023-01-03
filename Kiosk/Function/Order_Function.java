@@ -2,29 +2,28 @@ package Kiosk.Function;
 
 import Discounts.Condition.Coz;
 import Discounts.Condition.Kid;
-
-import java.util.Scanner;
+import Discounts.DS_Condition;
+import Discounts.Policy.FixedAmount;
+import Discounts.Policy.FixedRate;
 
 public class Order_Function {
     Cart_Function cartFunction;
+    private DS_Condition[] dsConditions;
 
-    public Order_Function(Cart_Function cartFunction) {
+    public Order_Function(Cart_Function cartFunction,DS_Condition[] dsCondition) {
         this.cartFunction = cartFunction;
+        this.dsConditions = dsCondition;
     }
 
     public void makeOrder() {
-        Coz coz = new Coz();
-        Kid kid = new Kid();
-        coz.checkDiscountCondition();
-        kid.checkDiscountCondition();
 
         int totalPrice = cartFunction.totalPrice();
-
         int finalPrice = totalPrice;
 
-        if(coz.isSatisfied()) finalPrice = coz.applyDiscount(finalPrice);
-        if(kid.isSatisfied()) finalPrice = kid.applyDiscount(finalPrice);
-
+        for (DS_Condition dsCondition : dsConditions) {
+            dsCondition.checkDiscountCondition();
+            if (dsCondition.isSatisfied()) finalPrice = dsCondition.applyDiscount(finalPrice);
+        }
 
         System.out.println("[📣] 주문이 완료되었습니다. ");
         System.out.println("[📣] 주문 내역은 다음과 같습니다. ");

@@ -21,7 +21,7 @@ public class Burgers extends Product {
     public boolean isBurgerSet() {
         return isBurgerSet;
     }
-    public void setBurgerSet(boolean isBurgerSet) {
+    public void setIsBurgerSet(boolean isBurgerSet) {
         this.isBurgerSet = isBurgerSet;
     }
     public int getBurgerSetPrice() {

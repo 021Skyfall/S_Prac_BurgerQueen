@@ -1,6 +1,6 @@
 package Discounts.Policy;
 
-public class FixedRate {
+public class FixedRate implements Policy{
     private int dicountRate;
 
     public FixedRate(int dicountRate) {

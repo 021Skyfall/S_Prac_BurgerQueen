@@ -54,7 +54,7 @@ public class Cart_Function {
             ,product.getPrice(),((Burgers) product).getBurgerSetPrice());
             input = scanner.nextLine();
             if (input.equals("2")){
-                ((Burgers) product).setBurgerSet(true);
+                ((Burgers) product).setIsBurgerSet(true);
             }
         } else if (product instanceof Side) {
             System.out.println("케첩은 몇 개 필요하십니까?");

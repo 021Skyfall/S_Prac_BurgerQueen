@@ -1,5 +1,10 @@
 package Kiosk;
 
+import Discounts.Condition.Coz;
+import Discounts.Condition.Kid;
+import Discounts.DS_Condition;
+import Discounts.Policy.FixedAmount;
+import Discounts.Policy.FixedRate;
 import Kiosk.Function.Cart_Function;
 import Kiosk.Function.Menu_Function;
 import Kiosk.Function.Order_Function;
@@ -15,7 +20,10 @@ public class Kiosk {
         Product[] products = productRepository.getProducts();
         Menu_Function menuFunction = new Menu_Function(products);
         Cart_Function cartFunction = new Cart_Function(productRepository,menuFunction);
-        Order_Function orderFunction = new Order_Function(cartFunction);
+        Order_Function orderFunction = new Order_Function(cartFunction,new DS_Condition[]{
+                new Coz(new FixedRate(10)),
+                new Kid(new FixedAmount(500))
+        });
 
         Scanner scanner = new Scanner(System.in);
 
